@@ -40,16 +40,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Converter.cs" />
-    <Compile Include="ConverterResolver.cs" />
-    <Compile Include="DefaultConverter.cs" />
-    <Compile Include="DefaultConverterResolver.cs" />
-    <Compile Include="InvalidTypeException.cs" />
-    <Compile Include="MappingHelper.cs" />
-    <Compile Include="InvalidMapException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropertyNameAttribute.cs" />
-    <Compile Include="StandartConverterResolver.cs" />
+    <Compile Include="src\Attributes\PropertyNameAttribute.cs" />
+    <Compile Include="src\Converters\Converter.cs" />
+    <Compile Include="src\Converters\DefaultConverter.cs" />
+    <Compile Include="src\Exceptions\InvalidMapException.cs" />
+    <Compile Include="src\Exceptions\InvalidTypeException.cs" />
+    <Compile Include="src\Helpers\MappingHelper.cs" />
+    <Compile Include="src\Services\DefaultConverterResolver.cs" />
+    <Compile Include="src\Services\ConverterResolver.cs" />
+    <Compile Include="src\Services\StandartConverterResolver.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -59,4 +59,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="src\" />
+  </ItemGroup>
 </Project>
