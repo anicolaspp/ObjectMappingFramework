@@ -9,6 +9,8 @@ namespace Example
         {
             DogFromDataBase databaseDog = new DogFromDataBase { id = 2, Address = "14214 SW", Dog_Name = "Gretel" };
 
+            //because an string can not be converter to an Address by default, we need to specify how the conversion is done.
+            //The conversion is done into MyConverter
             DogDomain domainDog = databaseDog.MapTo<DogDomain>(new MyConverter());
 
             Console.WriteLine(domainDog.Address.number);
