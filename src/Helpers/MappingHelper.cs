@@ -150,6 +150,16 @@ namespace MappingObjectsFramework
 //            return result;
 		}
 
+		/// <summary>
+		/// Maps to any generic type using DefaultConverterResolver if not converter is passed.
+		/// If some converters are passed, then StandartConverterResolver is used, also the Default Converter is use if 
+		/// not default converter was specified.
+		/// </summary>
+		/// <returns>A completely new object is returned where its properties have the value of the properties on the caller object that match</returns>
+		/// <param name="obj">The caller object. Its properties are read and then copied to the new object result</param>
+		/// <param name="converters">Each converter should has the ability to convert from one data type to another. 
+		/// If not converter is passed, then the DefaultConverterResolver will be used</param>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
 		public static T MapTo<T>(this object obj, params Converter[] converters) where T : new()
 		{
 			if (converters.Length == 0)
@@ -163,6 +173,8 @@ namespace MappingObjectsFramework
 			}
 
 			return MapTo<T>(obj, converterResolver);
+			
+			
 
 			#region old
 

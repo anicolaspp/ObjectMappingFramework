@@ -36,4 +36,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\MappingObjectsFramework.csproj">
+      <Project>{32D3EFEC-BB67-4039-A130-387BD97D7CFD}</Project>
+      <Name>MappingObjectsFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

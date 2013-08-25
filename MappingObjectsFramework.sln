@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MappingObjectsFramework", "MappingObjectsFramework.csproj", "{32D3EFEC-BB67-4039-A130-387BD97D7CFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{C01718BD-AA9F-42AD-8261-5676056E2CF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,8 +15,12 @@ Global
 		{32D3EFEC-BB67-4039-A130-387BD97D7CFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32D3EFEC-BB67-4039-A130-387BD97D7CFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32D3EFEC-BB67-4039-A130-387BD97D7CFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C01718BD-AA9F-42AD-8261-5676056E2CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C01718BD-AA9F-42AD-8261-5676056E2CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C01718BD-AA9F-42AD-8261-5676056E2CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C01718BD-AA9F-42AD-8261-5676056E2CF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = MappingObjectsFramework.csproj
+		StartupItem = Example\Example.csproj
 	EndGlobalSection
 EndGlobal
