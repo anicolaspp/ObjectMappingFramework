@@ -47,10 +47,11 @@
     <Compile Include="src\Converters\DefaultConverter.cs" />
     <Compile Include="src\Exceptions\InvalidMapException.cs" />
     <Compile Include="src\Exceptions\InvalidTypeException.cs" />
-    <Compile Include="src\Helpers\MappingHelper.cs" />
     <Compile Include="src\Services\DefaultConverterResolver.cs" />
     <Compile Include="src\Services\ConverterResolver.cs" />
     <Compile Include="src\Services\StandartConverterResolver.cs" />
+    <Compile Include="src\Helpers\NameMap.cs" />
+    <Compile Include="src\Helpers\MappingHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

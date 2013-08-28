@@ -239,7 +239,8 @@ namespace MappingObjectsFramework
 		{
 			return Map<T>(obj, converterResolver, false);
 		}
-
+		//TODO: need to implement this!!!
+		//Basically what is does is match the properties using the name of the source and the target property
 		public static T MapByName<T>(this object obj, params NameMap[] nameMaps) where T : new()
 		{
 			return new T();
