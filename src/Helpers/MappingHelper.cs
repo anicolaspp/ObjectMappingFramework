@@ -239,5 +239,10 @@ namespace MappingObjectsFramework
 		{
 			return Map<T>(obj, converterResolver, false);
 		}
+
+		public static T MapByName<T>(this object obj, params NameMap[] nameMaps) where T : new()
+		{
+			return new T();
+		}
 	}
 }
