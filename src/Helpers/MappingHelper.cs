@@ -9,6 +9,11 @@ namespace MappingObjectsFramework
 	{
 		private static T Map<T>(object obj, ConverterResolver converterResolver, bool useAttribute) where T : new()
 		{
+			if (obj == null)
+			{
+				throw new ArgumentNullException("obj");
+			}
+			
 			if (converterResolver == null)
 			{
 				throw new ArgumentNullException("converterResolver");
@@ -76,6 +81,58 @@ namespace MappingObjectsFramework
 				
 			
 
+			return result;
+		}
+		// TODO: needs proper implementation
+		private static T Map<T>(object obj, MappingNameResolver mapping) where T : new()
+		{
+			if (obj == null)
+			{
+				throw new ArgumentNullException("obj");
+			}
+
+			if (mapping == null)
+			{
+				throw new ArgumentNullException("mapping");
+			}
+
+			T result = new T();
+			
+			foreach (var propertyInfo in result.GetType().GetProperties())
+			{
+				PropertyInfo propertySource = null;
+				
+				string targetName = mapping.GetSource(propertyInfo.Name);
+				
+				if (string.IsNullOrEmpty(targetName))
+					continue;
+				
+				//propertySource = obj.GetType().GetProperty(
+			}
+		}
+		// TODO: needs proper implementation
+		private static T Map<T>(object obj, IEnumerable<NameMap> mapping) where T : new()
+		{
+			if (obj == null)
+			{
+				throw new ArgumentNullException("obj");
+			}
+			
+			if (mapping == null)
+			{
+				throw new ArgumentNullException("mapping");
+			}
+			
+			T result = new T();
+			
+			foreach (var propertyInfo in result.GetType().GetProperties())
+			{
+				PropertyInfo propertySource = null;
+				
+				//string targetName = mapp
+			}
+			
+			
 			return result;
 		}
 
